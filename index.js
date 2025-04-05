@@ -1,3 +1,14 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-database.js";
+import { firebaseConfig } from "./config.js";
+
+
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+
+console.log("Firebase App initialized:", app);
+console.log("Firebase Database initialized:", database);
+
 let myLeads = []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
